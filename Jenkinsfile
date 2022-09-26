@@ -1,17 +1,25 @@
+#!/usr/bin/env groovy
+
 pipeline {
+
     agent {
         docker {
-            image 'cturra/ntp'
+            image 'node'
+            args '-u root'
         }
     }
+
     stages {
         stage('Build') {
             steps {
-                sh 'docker run --name=ntp            \
-                               --restart=always      \
-              		       --detach              \
-              			 --publish=123:123/udp \
-              			 cturra/ntp'
+                echo 'Building...'
+                sh 'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                sh 'npm test'
             }
         }
     }
