@@ -1,17 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'cturra/ntp'
-        }
-    }
+    agent { docker { image 'golang:1.17.5-alpine' } }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                sh 'docker run --name=ntp            \
-                               --restart=always      \
-              		       --detach              \
-              			 --publish=123:123/udp \
-              			 cturra/ntp'
+                sh 'go version'
             }
         }
     }
