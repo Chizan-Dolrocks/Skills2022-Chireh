@@ -64,6 +64,21 @@ To see details on the ntp status of my container, I used this command : <br />
 ###### Detail about ntp status <br />
 <img width="458" alt="task3 4-Test-NTP-container-detail" src="https://user-images.githubusercontent.com/84504744/192145870-11cd6e68-8be5-4b30-8234-e9250c2e05e4.png"><br />
 
+## Task 5 -- Unit testing
+##### ● Task name =>  Unit testing
+##### ● Task preparation => Create a unittest script in Python that asserts the output of all the functions in the given Python module..
+##### ● Task implementation => To implement this task, first I create 2 python files "Py_modules_T5.py" and "Test_py_modules.py", the first file contains the modules to be tested by the seconde file.
+###### This is the content of the Py_modules_T5.py
+<img width="223" alt="task5 1-modules-python-task5" src="https://user-images.githubusercontent.com/84504744/192279662-7e40ed8a-7939-42ac-8dfa-d4cc3150f213.png">
 
+###### This is the content of the Test_py_modules.py
+<img width="310" alt="task5 2-test-modules-python" src="https://user-images.githubusercontent.com/84504744/192278317-7b0d3edd-6962-4c7c-8abb-a8aa207b1827.png"><br />
+<br />
+##### ● Task troubleshooting => in this task, have not encountered any problems.
+##### ● Task verification =>  
+###### This screenshot indicated the success of my actions
+<img width="356" alt="task5 3-results-test" src="https://user-images.githubusercontent.com/84504744/192278899-7379af87-1490-42c5-b0f5-71af11fea3c8.png">
+
+<br />
 
 
