@@ -1,25 +1,23 @@
-#!/usr/bin/env groovy
-
 pipeline {
-
     agent {
-        docker {
-            image 'node'
-            args '-u root'
-        }
+        docker { image 'cturra/ntp' }
     }
-
     stages {
-        stage('Build') {
+        stage('Building') {
             steps {
-                echo 'Building...'
-                sh 'npm install'
+                 echo 'Building...'
+                 sh 'docker run --name=ntp            \
+              			  --restart=always      \
+              			  --detach              \
+                                --publish=123:123/udp \
+              			    cturra/ntp'
             }
         }
+    }
+    stages {
         stage('Test') {
             steps {
-                echo 'Testing...'
-                sh 'npm test'
+                sh 'docker exec ntp chronyc tracking'
             }
         }
     }
