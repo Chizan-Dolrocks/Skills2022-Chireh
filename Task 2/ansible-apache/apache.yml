@@ -4,8 +4,8 @@
     tasks:
       - name: INSTALL APACHE2
         apt: name=apache2 update_cache=yes state=latest
-      - name: run echo command
-        command: /bin/echo hello world 
+      - name: TESTING THE WEBSERVER WITH PING
+        ansible.builtin.ping:
       - name: ENABLED MOD_REWRITE
         apache2_module: name=rewrite state=present
         notify:
